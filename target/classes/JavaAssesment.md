@@ -5,8 +5,7 @@
 *Explanation*
 `When a class implements the Comparable interface, it must also implement the compareTo method1. The compareTo method is used to compare the current object with another object of the same type. It returns a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the specified object`
 
-# 2. You’re encapsulating the Clothing class’s price field by writing a setPrice method. The price field must always be set above a certain minimum. 
-#    How would you implement this method?
+# 2. You’re encapsulating the Clothing class’s price field by writing a setPrice method.<br>The price field must always be set above a certain minimum.<br>How would you implement this method?
 
 [ ]
 public void setPrice(double price) {
@@ -45,7 +44,9 @@ public void setPrice(double price) {
 `In the above implementation, the setPrice method takes a double parameter price and checks if it is less than the minimum price. If it is, the method sets the price field to the minimum price. Otherwise, it sets the price field to the specified price`
 
 # 3. Given: 
-#    Employee[] department = new Employee[10];
+```
+Employee[] department = new Employee[10];
+```
 #    What exception occurs when you try adding an eleventh employee to the department?
 
 [x] ArrayIndexOutOfBoundsException
@@ -60,7 +61,9 @@ public void setPrice(double price) {
 `The department array is initialized with a length of 10, which means it can hold a maximum of 10 elements. If you try to add an eleventh element to the array, you will get an ArrayIndexOutOfBoundsException because the index is out of bounds`
 
 # 4. Given:
-#    Clothing item1 = new Clothing("Blue Jacket", 20.9, "M");
+```
+Clothing item1 = new Clothing("Blue Jacket", 20.9, "M");
+```
 #    How would you declare the Clothing constructor?
 
 [ ] public void Clothing(description, size){…}
@@ -91,7 +94,7 @@ public void setPrice(double price) {
 *Explanation*
 `The System.out.println() method is used to print text on the console in Java. It accepts a string as a parameter and prints the string followed by a newline character`
 
-# 6. You’ve setup a Clothing class with a has a public double field price. You’ve created two instances in your program’s main method where item1 is a  jacket and item2 is a shirt. You’ve also created a double for a tax rate in the main method. How would you accurately calculate the after-tax total for two shirts and a jacket from the main method?
+# 6. You’ve setup a Clothing class with a has a public double field price.<br>You’ve created two instances in your program’s main method where item1 is a  jacket and item2 is a shirt.<br>You’ve also created a double for a tax rate in the main method.<br>How would you accurately calculate the after-tax total for two shirts and a jacket from the main method?
 
 [ ] double total = (item2*2 + item1*(1+tax);
 
@@ -106,19 +109,20 @@ public void setPrice(double price) {
 *Explanation*
 `to calculate accurately we need to keep the fraction by using double variable`
 
-# 7. You have a Customer class with a public String field size. In your program’s main method, you create a Customer instance c1. 
-#    How could you consolidate this switch statement, which is used to set sizes based on an int variable measurement? 
-#    switch(measurement){
-#      case 1:
-#        c1.size "S";
-#        break;
-#      case 2:
-#        c1.size = S";
-#        break;
-#      case 3:
-#        c1.size = S";
-#        break;
-#    }
+# 7. You have a Customer class with a public String field size. In your program’s main method, you create a Customer instance c1.<br>How could you consolidate this switch statement, which is used to set sizes based on an int variable measurement? 
+```
+    switch(measurement){
+      case 1:
+        c1.size "S";
+        break;
+      case 2:
+        c1.size = S";
+        break;
+      case 3:
+        c1.size = S";
+        break;
+    }
+```
 
 [ ]
 switch(measurement){
@@ -176,10 +180,7 @@ public class Customer{
 *Explanation*
 `In the above implementation, the Customer class has one instance variable: name. The correct syntax for variable declaration in java first the data type followed by variable name`
 
-# 9. You have an array of Clothing objects called items. The Clothing class has public fields for size and price. 
-#    You create a loop to calculate the total price of items. 
-#    How would you add an if statement to ensure an item is only added to the total if it’s the same size as the customer c1? 
-#    Assume the Customer class has a public String field size.
+# 9. You have an array of Clothing objects called items. The Clothing class has public fields for size and price.<br>You create a loop to calculate the total price of items.<br>How would you add an if statement to ensure an item is only added to the total if it’s the same size as the customer c1?<br>Assume the Customer class has a public String field size.
 
 [x]
 for(Clothing c: items){
@@ -239,7 +240,9 @@ for(Clothing c: items){
 `Helidon is an open-source Java microservices framework that provides a collection of libraries and tools for building cloud-native applications`
 
 # 12. Given:
-#     public Customer(String name, int measurement) {…}
+```
+     public Customer(String name, int measurement) {…}
+```
 #     How would you instantiate a Customer object using this constructor?
 
 [x] Customer c1 = new Customer("Pinky", 3);
@@ -257,8 +260,7 @@ for(Clothing c: items){
 *Explanation*
 `In the above implementation, we create a new instance of the Customer class and pass the String "Pinky" and the int 3 as arguments to the constructor`
 
-# 13. How would you loop through the Clothing array items to calculate the total price of all items after tax? 
-#     The Clothing class has a public double field price. Assume the double variables total and tax are already declared.
+# 13. How would you loop through the Clothing array items to calculate the total price of all items after tax?<br>The Clothing class has a public double field price.<br>Assume the double variables total and tax are already declared.
 
 [ ]
 forEach(Clothing c in items){
@@ -283,7 +285,7 @@ for(Clothing c: items[]){
 *Explanation*
 `In the above implementation, we first initialize a total variable. We then iterate over each Clothing object in the items array and add the price of the Clothing object multiplied by 1 + tax to the total variable. Finally, we return the total variable.`
 
-# 14. You write a method to calculate the average price of all Clothing items owned by a Customer. This method adds the price of all items, then divides this value by the number of items. If there are no items, your method will attempt to divide by zero. What type of exception must you guard against in this scenario?
+# 14. You write a method to calculate the average price of all Clothing items owned by a Customer.<br>This method adds the price of all items, then divides this value by the number of items. <br>If there are no items, your method will attempt to divide by zero.<br>What type of exception must you guard against in this scenario?
 
 [ ] NullPointerException
 
@@ -296,21 +298,22 @@ for(Clothing c: items[]){
 *Explanation*
 ` If there are no items, your method will attempt to divide by zero, which will result in an ArithmeticException`
 
-# 15. You have a Customer class with a public String field size. In you program’s main method, you create a Customer instance c1. 
-#     What is printed as a result of running this code from the main method?
-#     int measurement = 3;
-#     switch(measurement){
-#       case 3:
-#         c1.size = "S";
-#       case 6:
-#         c1.size = "M";
-#       case 9:
-#         c1.size = "L";
-#         break;
-#       default:
-#         c1.size = "X";
-#     }
-#     System.out.println(c1.size);
+# 15. You have a Customer class with a public String field size. In you program’s main method, you create a Customer instance c1.<br>What is printed as a result of running this code from the main method?
+```
+     int measurement = 3;
+     switch(measurement){
+       case 3:
+         c1.size = "S";
+       case 6:
+         c1.size = "M";
+       case 9:
+         c1.size = "L";
+         break;
+       default:
+         c1.size = "X";
+     }
+     System.out.println(c1.size);
+```
 
 [ ] M
 
@@ -323,10 +326,7 @@ for(Clothing c: items[]){
 *Explanation*
 `In the given code, we first declare an int variable measurement and initialize it to 3. We then use a switch statement to check the value of measurement. Since measurement is equal to 3, the code block associated with the case 3 label is executed, which sets the size field of the c1 instance to "S". The code blocks associated with the case 6 and case 9 labels are also executed because there are no break statements between them and the previous case. However, since there is a break statement after the case 9 label, the default code block is not executed. Finally, we print the value of the size field of the c1 instance, which is "L" because it was set by the case 9 code block`
 
-# 16. You’ve encapsulated the Customer class’s size field. The related setSize method requires an integer argument.
-#     This argument is translated into a String, which is used to set the class’s size String field.
-#     You instantiate a Customer c1 in the main method, which is written in another class. 
-#     How should you set the size of customer c1 from the main method?
+# 16. You’ve encapsulated the Customer class’s size field. The related setSize method requires an integer argument.<br>This argument is translated into a String, which is used to set the class’s size String field.<br>You instantiate a Customer c1 in the main method, which is written in another class. <br>How should you set the size of customer c1 from the main method?
 
 [x] c1.setSize(3);
 
@@ -352,8 +352,7 @@ for(Clothing c: items[]){
 *Explanation*
 `To create a Clothing array to store the item1 and item2 instances, add square braces in the object for an array and you can use curly braces for the values`
 
-# 18. How would you declare the MIN_PRICE field of the Clothing class? 
-#     The value of this field should never change. Accessing this field should not require you to create a Clothing instance.
+# 18. How would you declare the MIN_PRICE field of the Clothing class?<br>The value of this field should never change. Accessing this field should not require you to create a Clothing instance.
 
 [ ] public double static final MIN_PRICE = 10.0;
 
@@ -368,8 +367,7 @@ for(Clothing c: items[]){
 *Explanation*
 `The static modifier, in combination with the final modifier, is also used to define constants. The final modifier indicates that the value of this field cannot change.`
 
-# 19. A Customer class contains an encapsulated array field of Clothing items. 
-#     How would you write a getItems method in the Customer class to return these items?
+# 19. A Customer class contains an encapsulated array field of Clothing items.<br>How would you write a getItems method in the Customer class to return these items?
 
 [ ]
 public void getItems(Clothing items){
@@ -393,5 +391,3 @@ public Clothing getItems(){
 
 *Explanation*
 `In the above implementation, the Customer class has one instance variable: items, which is an array of Clothing objects. The getItems method returns the items array`
-
-# 20. 
